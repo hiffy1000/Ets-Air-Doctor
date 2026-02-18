@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Ets Air Doctor</title>
+    <link rel="stylesheet" href="contat.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <img
+            src="Adobe Express - file.png"
+            alt="AutoPart Pro Logo"
+            class="logo-img"
+          />
+        </div>
+        <div class="logo"></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="product.html">Nos Produits</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <section id="contact" class="contact section-padding">
+      <div class="container">
+        <div class="contact-wrapper reveal">
+          <div class="contact-info">
+            <h1>Ets Air Doctor</h1>
+            <p>
+              Besoin d'une pièce spécifique ou d'un conseil technique ? Notre
+              équipe d'experts en pièces auto est à votre écoute.
+            </p>
+
+            <div class="info-item">
+              <span>📍</span>
+              <p>123 Rue de l'Automobile, 75000 Paris</p>
+            </div>
+            <div class="info-item">
+              <span>📞</span>
+              <p>+22893557552</p>
+            </div>
+            <div class="info-item">
+              <span>✉️</span>
+              <p>1stpeter@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="input-group">
+                <label for="name">Nom Complet</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Ex: Jean Dupont"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="email">Adresse E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jean.dupont@mail.com"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="subject">Sujet</label>
+                <select id="subject" name="subject">
+                  <option value="devis">Demande de devis</option>
+                  <option value="dispo">Disponibilité de pièce</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="message">Votre Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Décrivez la pièce recherchée (Modèle, Année, VIN...)"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                Envoyer le message
+              </button>
+              <p id="formStatus"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="https://wa.me/+22893557552" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="footer-section">
+      <div class="footer-col">
+        <h3>About</h3>
+        <p>
+          <strong>Ets Air Doctor.</strong> Your trusted partner in indoor air
+          quality. We specialize in comprehensive HVAC diagnostics, maintenance,
+          and air purification solutions driven by precision, powered by
+          innovation.
+        </p>
+        <img
+          src="Adobe Express - file.png"
+          alt="Ets Air Doctor Logo"
+          class="footer-logo"
+        />
+      </div>
+
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="services-list">
+          <li>Entretien général de la climatisation</li>
+          <li>Nettoyage en profondeur des serpentins</li>
+          <li>Remplacement du filtre à air</li>
+          <li>Réparation du système CVC (HVAC)</li>
+          <li>Test de la qualité de l’air intérieur</li>
+          <li>Installation de stérilisation UV</li>
+          <li>Assainissement des conduits d’air</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul>
+          <li>Plans tarifaires</li>
+          <li>Notre zone de service</li>
+          <li>Conseils d’entretien</li>
+          <li>Manuels des produits</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Entreprise</h3>
+        <ul>
+          <li>À propos de nous</li>
+          <li>Contact</li>
+          <li>Politique de confidentialité</li>
+        </ul>
+      </div>
+    </footer>
+
+    <footer>
+      <p>&copy; 2026 Ets Air Doctor. Tous droits réservés.</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

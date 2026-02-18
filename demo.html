@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .ticker-wrap {
+        width: 100%;
+        overflow: hidden;
+        background-color: #e34234; /* Matching the red from your image */
+        padding: 12px 0;
+        box-sizing: border-box;
+      }
+
+      .ticker {
+        display: inline-block;
+        white-space: nowrap;
+        will-change: transform;
+        /* The animation duration (30s) controls the speed */
+        animation: marquee 30s linear infinite;
+      }
+
+      .ticker-item {
+        display: inline-block;
+        padding-right: 50px; /* Space between the repeating messages */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+
+      /* The magic: Move the container by exactly 50% because we have two identical sets */
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Pause on hover so people can actually read it! */
+      .ticker-wrap:hover .ticker {
+        animation-play-state: paused;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ticker-wrap">
+      <div class="ticker" id="tickerLoop">
+        <span class="ticker-item"
+          >⚡ European Auto Spares: Your one stop shop for 100% Original and
+          Aftermarket Parts! ⚡ Enjoy Free Delivery in Sharjah! ⚡</span
+        >
+        <span class="ticker-item"
+          >⚡ European Auto Spares: Your one stop shop for 100% Original and
+          Aftermarket Parts! ⚡ Enjoy Free Delivery in Sharjah! ⚡</span
+        >
+      </div>
+    </div>
+
+    <script>
+      // No complex JavaServer needed!
+      // This simple script ensures the loop stays perfectly aligned.
+      const ticker = document.getElementById("tickerLoop");
+
+      // If you ever want to change the text via code,
+      // you just need to update both spans.
+    </script>
+  </body>
+</html>

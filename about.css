@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Manufacturing+Consent&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --dark: #121212;
+  --gray: #1e1e1e;
+  --accent: #ff4d00; /* Ignite Orange */
+  --text: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: white;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* Navbar Styling */
+header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3498db; /* Professional Blue */
+}
+
+/* Mobile Menu Toggle 
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+*/
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1100;
+  /* Removes default button styling if you used a <button> tag */
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Hamburger bars (make toggle visible on dark header) 
+.menu-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+*/
+.menu-toggle .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  font-family: "Playfair Display", serif;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 0.9rem;
+  color: black;
+  font-family: "roboto", cursive;
+}
+
+/* Stats Section */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 10%;
+  background: var(--gray);
+}
+
+.stat-item {
+  text-align: center;
+}
+.stat-item h2 {
+  font-size: 3rem;
+  color: var(--text);
+  margin: 0;
+}
+.stat-item p {
+  font-size: 1rem;
+  font-family: "poppins", cursive;
+  color: yellow;
+  margin: 5px 0 0;
+}
+/* Content Sections */
+.about-section {
+  display: flex;
+  padding: 80px 10%;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text,
+.about-image {
+  flex: 1;
+}
+.about-section p {
+  font-size: 1.2rem;
+  color: black;
+  font-family: "poppins", cursive;
+  margin-bottom: 20px;
+}
+.about-section h2 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "roboto", cursive;
+}
+
+.image-placeholder {
+  width: 100%;
+  background: var(--dark);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent);
+}
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Ensure the about section stacks on smaller screens */
+@media (max-width: 768px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 5%;
+    gap: 20px;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+    flex: unset;
+  }
+
+  .about-img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* Grid Cards */
+.values {
+  padding: 40px ;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--gray);
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.card.reveal h3 {
+    color: yellow;
+    font-size: 1.6rem;
+    font-family: "roboto", cursive;
+    text-transform: uppercase;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  border-bottom: 3px solid transparent;
+  margin: 15px 0 15px;
+}
+
+.card.reveal p {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-family: "poppins", cursive;
+    line-height: 1.6;
+  border-radius: 10px;
+  margin: 0;
+  transition: transform 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent);
+}
+
+/* Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-pdg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.conteneur-image-pdg {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  position: relative;
+}
+
+.image-pdg {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Effet de bordure décorative */
+  box-shadow: -20px 20px 0px var(--couleur-accent);
+  transition: all 0.4s ease;
+  display: block;
+}
+
+.image-pdg:hover {
+  transform: translate(5px, -5px);
+  box-shadow: -25px 25px 0px var(--couleur-accent);
+}
+
+.contenu-pdg {
+  flex: 1.2;
+  min-width: 320px;
+}
+
+.badge-pdg {
+  color: var(--couleur-accent);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  display: block;
+}
+.badge-pdd {
+  color: red;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-size: 1.6rem;
+
+  font-family: "dancing script", cursive;
+  display: block;
+}
+
+.contenu-pdg h2 {
+  font-size: 1.8rem;
+  color: rgb(3, 3, 235);
+  margin-bottom: 25px;
+  line-height: 1.2;
+  font-family: "roboto", cursive;
+}
+
+.contenu-pdg p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: black;
+  font-family: "poppins", cursive;
+  margin-bottom: 30px;
+}
+
+.bouton-contact {
+  padding: 15px 35px;
+  background-color: var(--couleur-primaire);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+.bouton-contact:hover {
+  background-color: var(--couleur-accent);
+  transform: translateY(-2px);
+}
+
+/* Adaptabilité Mobile */
+@media (max-width: 992px) {
+  .section-pdg {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+  .image-pdg {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+}
+
+.mvv-container {
+  padding: 80px 10%;
+  background-color: var(--light-bg);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+}
+
+.mvv-header {
+  margin-bottom: 50px;
+}
+
+.mvv-header h2 {
+  font-size: 2.5rem;
+  color: black;
+  position: relative;
+  font-family: "roboto", cursive;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Petit trait décoratif sous le titre */
+.mvv-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mvv-card {
+  background: var(--gray);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-top: 5px solid transparent;
+}
+
+.mvv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--accent);
+}
+
+.mvv-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.mvv-card h3 {
+  color: yellow;
+  font-size: 1.5rem;
+  font-family: "poppins", cursive;
+  margin-bottom: 15px;
+}
+
+.mvv-card p {
+    color: var(--text);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mvv-container {
+    padding: 60px 5%;
+  }
+}
+/* Footer */
+footer {
+  background: #111;
+  color: #666;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive: make product rail images larger on small screens */
+@media (max-width: 600px) {
+  .slider-container {
+    padding: 12px 0;
+  }
+
+  .slider-track {
+    width: auto !important;
+    animation: none !important;
+    display: flex;
+  }
+
+  .cat-card {
+    width: calc(45vw);
+    margin: 0 8px;
+    flex-shrink: 0;
+  }
+
+  .cat-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 8px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--dark);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Make logo a bit smaller on mobile so it doesn't crowd the screen */
+  .logo-container {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+:root {
+  --dark: #000;
+  --primary: #007bff;
+  --primary-blue: #0056b3;
+  --heading-black: #1a1a1a;
+  --bg-light: #f9f9f9;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-section {
+  background-color: var(--bg-light);
+  padding: 60px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  color: var(--heading-black);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.footer-col p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  max-width: 300px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-col ul li:hover {
+  color: #000;
+}
+
+/* Bullet style for Services column as seen in image */
+.services-list li::before {
+  content: "• ";
+  color: var(--text-gray);
+  margin-right: 5px;
+}
+
+.footer-logo {
+  margin-top: 30px;
+  max-width: 100px;
+  display: block;
+}

@@ -1,0 +1,232 @@
+/* Use the CSS from the previous response for the Navbar and Product Grid */
+
+/* --- Added/Modified Styles for Engine Oil Page --- */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar Styling */
+header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3498db; /* Professional Blue */
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.vehicle-card {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    
+}
+
+.vehicle-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.vehicle-image {
+    flex: 1;
+    min-width: 100%;
+    text-align: center;
+}
+
+.vehicle-image h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.vehicle-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.vehicle-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.vehicle-info h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.specs p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background-color: #3366cc;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #4a76c5;
+    color: white;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 20px 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
+.oil-hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=1000');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid #f39c12; /* Gold accent */
+}
+
+/* Footer Styling */
+.main-footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 40px 5% 20px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info, .footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-content h4 {
+  margin-bottom: 15px;
+  color: #f39c12;
+  text-transform: uppercase;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    text-align: center;
+  }
+}
