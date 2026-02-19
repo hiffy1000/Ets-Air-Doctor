@@ -75,3 +75,37 @@ navItems.forEach((item) => {
   });
 });
 const ticker = document.getElementById("tickerLoop");
+
+// About image carousel: rotates 3 images with a fade
+(function () {
+  const aboutImg = document.querySelector(".about-image img");
+  if (!aboutImg) return;
+
+  const images = [
+    "./1770464030771~2.png",
+    "./1771478009510~2.png",
+    "./1771478167317~3.png",
+  ];
+
+  // preload
+  images.forEach((src) => {
+    const i = new Image();
+    i.src = src;
+  });
+
+  let index = 0;
+  const changeInterval = 5000; // ms
+  const fadeDelay = 650; // ms - matches CSS transition (0.7s)
+
+  // ensure initial image matches array
+  aboutImg.src = images[0];
+
+  setInterval(() => {
+    aboutImg.style.opacity = "0";
+    setTimeout(() => {
+      index = (index + 1) % images.length;
+      aboutImg.src = images[index];
+      aboutImg.style.opacity = "1";
+    }, fadeDelay);
+  }, changeInterval);
+})();
